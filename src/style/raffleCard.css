@@ -1,0 +1,15 @@
+.card{
+    border-radius: 1rem !important;
+}
+.raffle-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .raffle-card:hover {
+    transform: translateY(-10px); 
+  }
+  .finished-card :not(.statusArea)> * {
+    filter: grayscale(100%);
+  }
+  
+  

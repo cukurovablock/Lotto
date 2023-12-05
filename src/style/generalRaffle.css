@@ -1,0 +1,7 @@
+.joinButton {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .joinButton:hover {
+    transform: translateY(-10px); 
+  }

@@ -1,0 +1,13 @@
+.box{
+    background-color: #0b1120;
+}
+.ruleImg{
+    width: 35px !important;
+}
+.box {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .box:hover {
+    transform: scale(1.1); 
+  }  
