@@ -74,7 +74,7 @@ function Navbar() {
                     <Link
                             className='nav-link cursor-pointer text-xl text-white relative'
                             activeClass="active"
-                            to="hizmetlerimiz"
+                            to="raffleTable"
                             spy={true}
                             smooth={true}
                             duration={100}

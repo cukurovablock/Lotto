@@ -22,11 +22,11 @@ const GiveawayForm = ({ showModal, setShowModal }) => {
 
   return (
     <>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton>
+      <Modal show={showModal} onHide={() => setShowModal(false)} >
+        <Modal.Header className='border-none text-white bg-purpleOne' >
           <Modal.Title className='w-full flex items-center justify-center'>Create Giveaway</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className='text-white bg-purpleOne'>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="giveawayName">
               <Form.Label>Giveaway Name</Form.Label>

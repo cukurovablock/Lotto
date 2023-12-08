@@ -1,30 +1,115 @@
 import React, { useState } from 'react';
 import RaffleCard from './raffleCard';
 import image from '../images/image.png';
-import x from '../images/x.jpg';
+import image1 from '../images/image1.png';
+import image2 from '../images/image2.png';
+import x from '../images/XLogo.png';
+import wallet from "../images/Wallet.png"
+import account from "../images/Accountt.png"
 
 function AllRaffles() {
   const initialRaffles = [
-    { raffleImage: image, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x},
-    { raffleImage: image, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x},
-    { raffleImage: image, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x},
-    { raffleImage: image, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x},
-    { raffleImage: image, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x},
-    { raffleImage: image, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x },
-    { raffleImage: image, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", rules:["You must follow us in twitter.","There must be at least 5 ETH in your account.","Your account must be created at least 3 months ago."],ruleImg: x},
+    { raffleImage: image, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat", 
+    rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image1, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Emre",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image2, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Samet",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Çolak",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image1, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Bayram",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image2, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Emre",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image1, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Samet",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image2, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Çolak",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Bayram",    rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image1, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image2, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Emre",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Samet",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image1, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Çolak",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image2, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Bayram",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image, raffleName: "Azat's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Azat",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image1, raffleName: "Emre's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Emre",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image2, raffleName: "Samet's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Samet",    rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
+    { raffleImage: image, raffleName: "Çolak's 100 ETH GIVEAWAY", rules: 'follow us', status: 'finished',prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Çolak",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ] },
+    { raffleImage: image1, raffleName: "Bayram's 100 ETH GIVEAWAY", rules: 'follow us', status: 'live' ,prize: "1000 ETH",duration: "7 Days", joined:"1560",creater: "Bayram",     rules:[
+      {title:"You must follow us in twitter.",img:x},
+      {title:"There must be at least 5 ETH in your account.",img:wallet},
+      {title:"Your account must be created at least 3 months ago.",img:account},
+    ]},
   ];
 
   const [raffles, setRaffles] = useState(initialRaffles);

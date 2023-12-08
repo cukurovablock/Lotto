@@ -10,15 +10,15 @@ const ViewRaffle = ({ showModal, setShowModal, name, prize, duration, creater, j
   return (
     <>
       <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header className='bg-purpleOne border-0'>
+        <Modal.Header className=' border-0'>
           <Modal.Title className=' text-white w-full flex items-center justify-center'>{name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className='bg-purpleOne'>
+        <Modal.Body className=''>
           <div className='row'>
             <div className='col-6'>
               <div className='durationAndJoinedArea flex justify-between m-3'>
-                <h1 className='text-center text-white text-lg p-1 bg-blueOne'>{duration}</h1>
-                <h1 className='text-center text-white text-lg p-1 bg-blueOne'>{joined} People Joined !</h1>
+                <h1 className='text-center text-white text-lg p-2 rounded-xl  bg-pinkOne'>{duration}</h1>
+                <h1 className='text-center text-white text-lg p-2 rounded-xl  bg-purpleOne'>{joined} People Joined !</h1>
               </div>
               <div className='prizeArea'>
                 <h1 className='text-center text-white text-4xl'>{prize}</h1>
@@ -30,8 +30,8 @@ const ViewRaffle = ({ showModal, setShowModal, name, prize, duration, creater, j
             <div className='col-6'>
               <h5 className='text-center text-white text-lg'>RULES</h5>
               <div className='rulesAresv flex flex-wrap gap-4'>
-                {isRulesArray && rules.map((rule, index) => (
-                  <RuleBox rule={rule} key={index} image={ruleImg} />
+                {rules.map((rule, index) => (
+                  <RuleBox rule={rule.title} key={index} image={rule.img} />
                 ))}
               </div>
             </div>

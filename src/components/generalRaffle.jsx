@@ -1,9 +1,9 @@
 import React from 'react'
 import RuleBox from './ruleBox'
-import x from "../images/x.jpg"
 import mobile from "../images/mobile.png"
-import wallet from "../images/wallet.png"
-import account from "../images/account.png"
+import x from '../images/XLogo.png';
+import wallet from "../images/Wallet.png"
+import account from "../images/Accountt.png"
 import "../style/generalRaffle.css"
 
 function GeneralRaffle({image}) {

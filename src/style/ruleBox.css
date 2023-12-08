@@ -1,8 +1,9 @@
 .box{
-    background-color: #0b1120;
+    background: url("../images/1stBox.png");
+    background-size: cover;
 }
 .ruleImg{
-    width: 35px !important;
+    width: 45px !important;
 }
 .box {
     transition: transform 0.3s ease-in-out;

@@ -1,4 +1,6 @@
 .modal-content{
     margin-top: 20%;
     width: 610px;
+    background: url("../images/Artboard.png");
+    background-size: cover;
 }

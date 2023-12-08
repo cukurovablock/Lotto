@@ -16,7 +16,7 @@ function RaffleCard({ raffleName, raffleImage, rules, status, creater, duration,
 
   return (
     <div className="mb-5">
-      <div className={`card w-56 m-4 raffle-card bg-sliderBg rounded-2xl relative ${status === 'finished' ? 'finished-card' : ''}`}>
+      <div className={`card w-56 h-96 m-4 raffle-card bg-sliderBg rounded-2xl relative ${status === 'finished' ? 'finished-card' : ''}`}>
         <div className={`finishArea absolute z-1 ${status === "finished" ? "block" : "hidden"} h-full flex items-center justify-center`}>
           <img src={finished} className='p-3'></img>
         </div>
@@ -24,8 +24,8 @@ function RaffleCard({ raffleName, raffleImage, rules, status, creater, duration,
           <span className={`h-4 w-4 rounded-full mt-1 ${status === 'live' ? 'bg-green-600' : 'bg-red-600'}`}></span>
           <h4 className='text-white ml-2 text-lg'>{status}</h4>
         </div>
-        <div className="w-58 flex items-center justify-center">
-          <img src={raffleImage} className="card-img-top object-contain rounded-2xl w-52" alt={raffleName} />
+        <div className="w-58 h-58 flex items-center justify-center">
+          <img src={raffleImage} className="card-img-top object-contain rounded-2xl w-52 h-52 " alt={raffleName} />
         </div>
         <div className="card-body justify-center items-center flex flex-col">
           <h5 className="card-title text-cardText2 font-semibold text-2xl text-center">{raffleName}</h5>

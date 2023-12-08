@@ -20,6 +20,9 @@ function SliderRaffle() {
       <h1 className='text-white text-3xl text-center m-4 underline-offset-0'>Top Joined Raffles</h1>  
       <Swiper
         effect={'coverflow'}
+        autoplay={{
+          delay: 5000, 
+        }}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
@@ -31,7 +34,7 @@ function SliderRaffle() {
           slideShadows: true,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination,Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
