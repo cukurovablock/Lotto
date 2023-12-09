@@ -17,7 +17,7 @@ module.exports = {
         purpleOne :"#9091ef",
         yellowOne:"#f8d699",
         pinkOne:"#4e5b98",
-        tableItemBg:"#4e5b9896",
+        tableItemBg:"#344596a1",
         cardText2 :"#fff"
       }
     },

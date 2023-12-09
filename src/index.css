@@ -2,7 +2,6 @@
   font-family: 'Oswald', sans-serif;
 }
 body{
-  background: url("./images/BG.png");
-  background-size: cover;
-  height: 100vh;
+  background: linear-gradient( to left,#9091ef,#4e5b98);
+  background-size: contain; 
 }

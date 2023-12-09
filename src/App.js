@@ -12,8 +12,8 @@ function App() {
     <>
       <Navbar/>
       <SliderRaffle/>
-      <AllRaffles/>
       <TableRaffle/>
+      <AllRaffles/>
       <Footer/>
     </>
   );

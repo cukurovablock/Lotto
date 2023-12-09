@@ -62,24 +62,24 @@ function Navbar() {
                     <Link
                             className='nav-link cursor-pointer text-xl text-white relative'
                             activeClass="active"
-                            to="allRaffles"
-                            spy={true}
-                            smooth={true}
-                            duration={100}
-                        >
-                            All Raffles
-                    </Link>
-                    </li>
-                    <li className="nav-item cursor-pointer mr-3">
-                    <Link
-                            className='nav-link cursor-pointer text-xl text-white relative'
-                            activeClass="active"
                             to="raffleTable"
                             spy={true}
                             smooth={true}
                             duration={100}
                         >
                             Raffle Table
+                    </Link>
+                    </li>
+                    <li className="nav-item cursor-pointer mr-3">
+                    <Link
+                            className='nav-link cursor-pointer text-xl text-white relative'
+                            activeClass="active"
+                            to="allRaffles"
+                            spy={true}
+                            smooth={true}
+                            duration={100}
+                        >
+                            All Raffles
                     </Link>
                     </li>
                 </ul>
