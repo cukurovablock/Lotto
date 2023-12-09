@@ -1,5 +1,7 @@
 import React from 'react'
 import img from "../images/image.png"
+import img1 from "../images/image1.png"
+import img2 from "../images/image2.png"
 import TableItem from './tableItem'
 
 function TableRaffle() {
@@ -18,7 +20,7 @@ function TableRaffle() {
     },
     {
         order:2,
-        raffleName:["Azat's 100 ETH Raffle",img],
+        raffleName:["Azat's 100 ETH Raffle",img1],
         dailyChange:"%18",
         participants:168,
         remainingTime:"3 Days",
@@ -28,7 +30,7 @@ function TableRaffle() {
 },
 {
     order:3,
-    raffleName:["Samet's 100 ETH Raffle",img],
+    raffleName:["Samet's 100 ETH Raffle",img2],
     dailyChange:"%3",
     participants:1958,
     remainingTime:"2 Days",
@@ -48,7 +50,7 @@ function TableRaffle() {
 },
 {
     order:5,
-    raffleName:["Çolak's 100 ETH Raffle",img],
+    raffleName:["Çolak's 100 ETH Raffle",img1],
     dailyChange:"%4",
     participants:328,
     remainingTime:"7 Days",

@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../style/raffleCard.css';
 import finished from '../images/finished.png';
 import ViewRaffle from './viewRaffle';
+import AOS from 'aos'
+
 
 function RaffleCard({ raffleName, raffleImage, rules, status, creater, duration, joined, prize, ruleImg }) {
   const [isVisible, setIsVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(()=>{
+    AOS.init({duration: 1000})
+  },[])
 
   const handleViewRaffle = () => {
     setShowModal(true);
@@ -16,7 +22,7 @@ function RaffleCard({ raffleName, raffleImage, rules, status, creater, duration,
 
   return (
     <div className="mb-5">
-      <div className={`card w-56 h-96 m-4 raffle-card bg-sliderBg rounded-2xl relative ${status === 'finished' ? 'finished-card' : ''}`}>
+      <div data-aos="fade-down" className={`card w-56 h-96 m-4 raffle-card bg-sliderBg rounded-2xl relative ${status === 'finished' ? 'finished-card' : ''}`}>
         <div className={`finishArea absolute z-1 ${status === "finished" ? "block" : "hidden"} h-full flex items-center justify-center`}>
           <img src={finished} className='p-3'></img>
         </div>

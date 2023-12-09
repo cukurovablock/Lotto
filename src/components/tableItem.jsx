@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import AOS from 'aos'
+
 
 function TableItem({order,raffleName,dailyChange,participants,remainingTime,award,winnerNumber,revealDate}) {
+  useEffect(()=>{
+    AOS.init({duration: 1000})
+  },[])
   return (
-        <tr className='bg-tableItemBg'>
+        <tr data-aos="fade-down" className='bg-tableItemBg'>
             <td className='text-center text-white '>{order}</td>
             <td className='flex items-center justify-center'>
                 <div className='flex justify-center items-center'>
