@@ -34,9 +34,8 @@ function Navbar() {
     <div>
       <nav className={navbarClasses}>
         <div className="container-fluid">
-            <div className='logoArea flex'>
-              <img src={logo} className='logo w-16 m-2' />
-              <h1 className='title text-white text-2xl ml-4 mt-4 mr-4'>Lotto</h1>
+            <div className='logoArea flex mb-3'>
+              <h1 className='title text-white text-4xl ml-4 mt-3 mr-4'>Lotto</h1>
               <div className='mt-4'>
               <Link to={""} className='text-white mx-2 text-xl mt-2'><i class="fa-brands fa-facebook"></i></Link>
               <Link to={""}  className='text-white mx-2 text-xl mt-2'><i class="fa-brands fa-twitter"></i></Link>
