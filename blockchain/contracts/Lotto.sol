@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
-import "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
-import "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol";
-import "@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol";
-import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
-import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
+import "../node_modules/@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
+import "../node_modules/@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
+import "../node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol";
+import "../node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol";
+import {Counters} from "../node_modules/@openzeppelin/contracts-v0.7/utils/Counters.sol";
+import {EnumerableSet} from "../node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import {Pausable} from "../node_modules/@openzeppelin/contracts/utils/Pausable.sol";
 
 contract Lotto is VRFConsumerBaseV2, ConfirmedOwner {
     using Counters for Counters.Counter;
@@ -140,6 +140,7 @@ contract Lotto is VRFConsumerBaseV2, ConfirmedOwner {
             _nums
         );
         s_requests[requestId] = RequestStatus({
+            requestId: requestId,
             randomWords: new uint256[](0),
             exists: true,
             fulfilled: false,
@@ -490,19 +491,19 @@ contract Lotto is VRFConsumerBaseV2, ConfirmedOwner {
     //------------------------------ OWNER FUNC ----------------------------------
 
     function withdrawAll(uint256 amount) external onlyOwner {
-        (bool sent, ) = owner.call{value: amount}("");
+        (bool sent, bytes memory data ) = msg.sender.call{value: amount}("");
         require(sent, "Failed to send Ether");
     }
 
-    function withdrawLink() external onlyOwner {
-        LinkTokenInterface linkToken = LinkTokenInterface(
-            COORDINATOR.getLinkToken()
-        );
-        require(
-            linkToken.transfer(msg.sender, linkToken.balanceOf(address(this))),
-            "Unable to transfer"
-        );
-    }
+    // function withdrawLink() external onlyOwner {
+    //     LinkTokenInterface linkToken = LinkTokenInterface(
+    //         COORDINATOR.getLinkToken()
+    //     );
+    //     require(
+    //         linkToken.transfer(msg.sender, linkToken.balanceOf(address(this))),
+    //         "Unable to transfer"
+    //     );
+    // }
 
     function setSubscriptionId(uint64 subscriptionId) external onlyOwner {
         s_subscriptionId = subscriptionId;
