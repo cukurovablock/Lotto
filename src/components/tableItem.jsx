@@ -4,7 +4,7 @@ import AOS from 'aos'
 
 function TableItem({order,raffleName,dailyChange,participants,remainingTime,award,winnerNumber,revealDate}) {
   useEffect(()=>{
-    AOS.init({duration: 1000})
+    AOS.init({duration: 2000})
   },[])
   return (
         <tr data-aos="fade-down" className='bg-tableItemBg'>

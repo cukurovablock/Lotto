@@ -10,7 +10,7 @@ function RaffleCard({ raffleName, raffleImage, rules, status, creater, duration,
   const [showModal, setShowModal] = useState(false);
 
   useEffect(()=>{
-    AOS.init({duration: 1000})
+    AOS.init({duration: 2000})
   },[])
 
   const handleViewRaffle = () => {

@@ -34,19 +34,18 @@ function Navbar() {
     <div>
       <nav className={navbarClasses}>
         <div className="container-fluid">
-            <div className='logoArea flex'>
-              <img src={logo} className='logo w-16 m-2' />
-              <h1 className='title text-white text-2xl ml-4 mt-4 mr-4'>Lotto</h1>
-              <div className='mt-4'>
-              <Link to={""} className='text-white mx-2 text-xl mt-2'><i class="fa-brands fa-facebook"></i></Link>
+            <div className='logoArea flex mb-3'>
+              <h1 className='title text-white text-4xl ml-4 mt-3 mr-4 animate__animated animate__bounceInDown'>Lotto</h1>
+              <div className='mt-4 animate__animated animate__bounceInDown'>
+              <Link to={""} className='text-white mx-2 text-xl mt-2 '><i class="fa-brands fa-facebook"></i></Link>
               <Link to={""}  className='text-white mx-2 text-xl mt-2'><i class="fa-brands fa-twitter"></i></Link>
               <Link to={""}  className='text-white mx-2 text-xl mt-2'><i class="fa-brands fa-instagram"></i></Link> 
-              <Link to={""}  className='text-white ml-2 text-xl mt-2 mr-10'><i class="fa-brands fa-youtube"></i></Link>  
+              <Link to={""}  className='text-white ml-2 text-xl mt-2'><i class="fa-brands fa-youtube"></i></Link>  
               </div>   
             </div>
             <div className="titleArea w-68">
               <ul className="navbar-nav">
-                    <li className="nav-item cursor-pointer mr-3">
+                    <li className="nav-item cursor-pointer mr-3 animate__animated animate__bounceInDown">
                     <Link
                             className='nav-link text-xl text-white cursor-pointer relative'
                             activeClass="active"
@@ -58,7 +57,7 @@ function Navbar() {
                             Top Joined 
                     </Link>
                     </li>
-                    <li className="nav-item cursor-pointer mr-3">
+                    <li className="nav-item cursor-pointer mr-3 animate__animated animate__bounceInDown">
                     <Link
                             className='nav-link cursor-pointer text-xl text-white relative'
                             activeClass="active"
@@ -70,7 +69,7 @@ function Navbar() {
                             Raffle Table
                     </Link>
                     </li>
-                    <li className="nav-item cursor-pointer mr-3">
+                    <li className="nav-item cursor-pointer mr-3 animate__animated animate__bounceInDown">
                     <Link
                             className='nav-link cursor-pointer text-xl text-white relative'
                             activeClass="active"
@@ -84,7 +83,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-            <div className="navbar-nav">
+            <div className="navbar-nav animate__animated animate__bounceInDown">
                 <button onClick={handleCreateRaffle} className='bg-blueOne text-white mr-3 ml-3  rounded-3xl p-2.5 mt-auto mb-auto'>Create Raffle</button> 
                 <ConnectButton/>
             </div>
