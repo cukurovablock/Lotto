@@ -3,11 +3,11 @@ import { createWeb3Modal, defaultConfig } from '@web3modal/ethers5/react'
 const projectId = '74a3110c105451dba332d9b89d1b1fad'
 
 const mainnet = {
-  chainId: 1,
-  name: 'Ethereum',
-  currency: 'ETH',
-  explorerUrl: 'https://etherscan.io',
-  rpcUrl: 'https://cloudflare-eth.com'
+  chainId: 43113,
+  name: 'Avax Fuji C-Chain',
+  currency: 'AVAX',
+  explorerUrl: 'https://testnet.snowtrace.io',
+  rpcUrl: 'https://api.avax-test.network/ext/bc/C/rpc'
 }
 
 const metadata = {

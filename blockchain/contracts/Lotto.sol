@@ -53,23 +53,23 @@ contract Lotto is VRFConsumerBaseV2, ConfirmedOwner {
 
     struct GiveawayInstance {
         GiveawayBase base;
-        address owner;
-        string giveawayName;
+        address owner; // Giveaway creater address, ex: 0x1234...
+        string giveawayName; // Giveaway name
         address[] winners;
-        address[] participants;
+        address[] participants; // Giveaway's active participants 
         RequestStatus requestStatus;
-        uint256 timeLength;
+        uint256 timeLength; // Giveaway's time length
         GiveawayState giveawayState;
-        uint256 maxParticipants;
-        uint256 amount;
-        address[] claimedWinners;
+        uint256 maxParticipants; // Giveaway's max participants
+        uint256 amount; // Giveaway's prize amount
+        address[] claimedWinners; 
         //Prize prize;
     }
 
     struct GiveawayBase {
-        uint256 id;
-        uint256 startDate;
-        uint8 totalWinners;
+        uint256 id; // Giveaway's id
+        uint256 startDate; // Giveaway's start date
+        uint8 totalWinners; // Giveaway's total winners
     }
 
     struct RequestStatus {
